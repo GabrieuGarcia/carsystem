@@ -1,17 +1,24 @@
 <f:view xmlns="http://www.w3c.org/1999/xhtml"
         xmlns:f="http://java.sun.com/jsf/core"
-        xmlns:h="http://java.sun.com/jsf/html">
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
         <title>TO-DO application</title>
     </h:head>
     <h:body>
-        <div>
-            <p>Welcome in the TO-DO application!</p>
-            <p style="height:50px">
-                This is a static message rendered from xhtml.
-            </p>
-        </div>
+        <h:form>
+        <p:panelGrid columns="2">
+            <h:outputLabel for="Name" value="Name"/>
+            <p:inputText id="Name" value="#{namesBean.name}"/>
+            <h:outputLabel for="Surname" value="Surname"/>
+            <p:inputText id="Surname" value="#{namesBean.surname}"/>
+
+            <p:commandButton value="Enviar"
+                             action="#{namesBean.dizerOla()}"
+                             update="msg"/>
+
+            <h:outputLabel id="msg" value="#{namesBean.getMessage()}"/>
+        </p:panelGrid>
+        </h:form>
     </h:body>
 </f:view>
