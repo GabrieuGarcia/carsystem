@@ -1,7 +1,12 @@
 package com.carsystem.carsystem.persistence.entity;
 
+import org.hibernate.annotations.Entity;
+import org.springframework.data.annotation.Id;
+
+@Entity
 public class Todo {
 
+    @Id
     private int id;
     private String message;
     private int priority;
