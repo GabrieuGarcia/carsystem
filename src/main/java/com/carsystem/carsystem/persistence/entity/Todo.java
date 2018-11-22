@@ -1,4 +1,4 @@
-package com.carsystem.persistence.entity;
+package com.carsystem.carsystem.persistence.entity;
 
 public class Todo {
 

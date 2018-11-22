@@ -1,7 +1,7 @@
-package com.carsystem.business.service;
+package com.carsystem.carsystem.service;
 
-import com.carsystem.persistence.entity.Todo;
-import com.carsystem.persistence.repository.CrudRepository;
+import com.carsystem.carsystem.persistence.entity.Todo;
+import com.carsystem.carsystem.persistence.repository.CrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

@@ -1,6 +1,6 @@
-package com.carsystem.persistence.repository;
+package com.carsystem.carsystem.persistence.repository;
 
-import com.carsystem.persistence.entity.Todo;
+import com.carsystem.carsystem.persistence.entity.Todo;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
