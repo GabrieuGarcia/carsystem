@@ -45,7 +45,4 @@ public class CarManageBean {
         return "/index.xhtml";
     }
 
-    private void checkPermission() {
-        // Details omitted
-    }
 }
