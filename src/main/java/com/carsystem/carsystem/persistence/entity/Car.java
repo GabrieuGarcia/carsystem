@@ -1,12 +1,17 @@
 package com.carsystem.carsystem.persistence.entity;
 
-import org.hibernate.annotations.Entity;
-import org.springframework.data.annotation.Id;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
 
 @Entity
+@Table(name = "Car")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Car {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name = "ID_CAR")
     private Integer id;
     private String modelName;
     private String brand;

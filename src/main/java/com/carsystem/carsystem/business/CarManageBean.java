@@ -42,7 +42,7 @@ public class CarManageBean {
 
     @Autowired
     public String loadTodoPage() {
-        return "/index.xhtml";
+        return "/car-register.xhtml";
     }
 
 }

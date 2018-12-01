@@ -7,6 +7,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.Bean;
 
 import javax.faces.webapp.FacesServlet;
+import javax.servlet.annotation.WebServlet;
 
 @SpringBootApplication
 public class CarsystemApplication extends SpringBootServletInitializer {
