@@ -4,12 +4,12 @@ import com.carsystem.carsystem.persistence.entity.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
-import javax.annotation.ManagedBean;
+import javax.faces.bean.ManagedBean;
 import java.util.ArrayList;
 import java.util.List;
 
 @Scope(value = "session")
-@ManagedBean(value = "carManageBean")
+@ManagedBean(name = "carManageBean")
 public class CarManageBean {
 
     private Car car;

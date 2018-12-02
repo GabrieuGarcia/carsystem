@@ -3,7 +3,7 @@
              xmlns:h="http://java.sun.com/jsf/html"
              xmlns:p="http://primefaces.org/ui"
              xmlns:ui="http://java.sun.com/jsf/facelets"
-template="template.xhtml">
+             template="template.xhtml">
 
     <h:form>
         <p:toolbar>
@@ -25,7 +25,7 @@ template="template.xhtml">
 
             <p:dataTable value="#{carManageBean.cars}" var="car">
 
-                <p:column>
+                <p:column headerText="Brand" sortBy="#{car.modelName}">
                     <h:outputLabel value="#{car.modelName}"/>
                 </p:column>
                 <p:column headerText="Brand" sortBy="#{car.brand}">
