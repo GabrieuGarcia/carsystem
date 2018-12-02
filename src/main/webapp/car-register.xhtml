@@ -1,48 +1,43 @@
-<f:view xmlns="http://www.w3c.org/1999/xhtml"
-        xmlns:f="http://java.sun.com/jsf/core"
-        xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:p="http://primefaces.org/ui">
-    <h:head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <title>Car System</title>
-    </h:head>
+<ui:decorate xmlns="http://www.w3c.org/1999/xhtml"
+             xmlns:f="http://java.sun.com/jsf/core"
+             xmlns:h="http://java.sun.com/jsf/html"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:ui="http://java.sun.com/jsf/facelets"
+template="template.xhtml">
 
-    <h:body>
-        <h:form>
-            <p:toolbar>
-                <p:toolbarGroup>
-                    <p:commandButton value="Add Car" action="#{carManageBean.add}" update="@form"/>
-                </p:toolbarGroup>
-            </p:toolbar>
-            <p:fieldset>
-                <p:panelGrid columns="2">
-                    <p:outputLabel value="Model/Name"/>
-                    <p:inputText value="#{carManageBean.car.modelName}"/>
-                    <p:outputLabel value="Brand"/>
-                    <p:inputText value="#{carManageBean.car.brand}"/>
-                    <p:outputLabel value="Color"/>
-                    <p:inputText value="#{carManageBean.car.color}"/>
-                    <p:outputLabel value="Year"/>
-                    <p:inputMask mask="9999" value="#{carManageBean.car.year}"/>
-                </p:panelGrid>
+    <h:form>
+        <p:toolbar>
+            <p:toolbarGroup>
+                <p:commandButton value="Add Car" action="#{carManageBean.add}" update="@form"/>
+            </p:toolbarGroup>
+        </p:toolbar>
+        <p:fieldset>
+            <p:panelGrid columns="2">
+                <p:outputLabel value="Model/Name"/>
+                <p:inputText value="#{carManageBean.car.modelName}"/>
+                <p:outputLabel value="Brand"/>
+                <p:inputText value="#{carManageBean.car.brand}"/>
+                <p:outputLabel value="Color"/>
+                <p:inputText value="#{carManageBean.car.color}"/>
+                <p:outputLabel value="Year"/>
+                <p:inputMask mask="9999" value="#{carManageBean.car.year}"/>
+            </p:panelGrid>
 
-                <p:dataTable value="#{carManageBean.cars}" var="car">
+            <p:dataTable value="#{carManageBean.cars}" var="car">
 
-                    <p:column headerText="Model/Name" sortBy="#{car.modelName}">
-                        <h:outputLabel value="#{car.modelName}"/>
-                    </p:column>
-                    <p:column headerText="Brand" sortBy="#{car.brand}">
-                        <h:outputLabel value="#{car.brand}"/>
-                    </p:column>
-                    <p:column headerText="Color" sortBy="#{car.color}">
-                        <h:outputLabel value="#{car.color}"/>
-                    </p:column>
-                    <p:column headerText="Year" sortBy="#{car.year}">
-                        <h:outputLabel value="#{car.year}"/>
-                    </p:column>
-                </p:dataTable>
-            </p:fieldset>
-        </h:form>
-    </h:body>
-</f:view>
+                <p:column>
+                    <h:outputLabel value="#{car.modelName}"/>
+                </p:column>
+                <p:column headerText="Brand" sortBy="#{car.brand}">
+                    <h:outputLabel value="#{car.brand}"/>
+                </p:column>
+                <p:column headerText="Color" sortBy="#{car.color}">
+                    <h:outputLabel value="#{car.color}"/>
+                </p:column>
+                <p:column headerText="Year" sortBy="#{car.year}">
+                    <h:outputLabel value="#{car.year}"/>
+                </p:column>
+            </p:dataTable>
+        </p:fieldset>
+    </h:form>
+</ui:decorate>
